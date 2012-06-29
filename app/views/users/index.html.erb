@@ -1,0 +1,14 @@
+<h1>Index Page</h1>
+<%@users.each do|user| %>
+<ul class = "nav">
+  <li>
+    <%= user.name %>
+    <%= user.age %>
+    <%= link_to "view", user%> ||
+    <%= link_to "create profile", new_profile_user_path(user)  if user.profile.present? == false%>   ||
+    <%= link_to "edit profile", edit_profile_user_path(user)  if user.profile.present? == true%>      ||
+  </li>
+</ul>
+<%end%>
+
+<%= link_to "new user" ,new_user_path%>

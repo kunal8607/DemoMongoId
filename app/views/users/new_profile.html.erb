@@ -1,0 +1,9 @@
+<h1>New Profile</h1>
+<%= form_for @user,:url =>create_profile_user_path(@user) do |f|%>
+    <%=f.fields_for :profile do |p| %>
+    name:
+    <%= p.text_field :nick_name  %>
+    <%= p.text_field :phone_number  %>
+    <%= f.submit %>
+<%end%>
+<%end%>

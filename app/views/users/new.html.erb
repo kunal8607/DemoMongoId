@@ -1,0 +1,7 @@
+<h1>New User</h1>
+<%= form_for @user  do |f|%>
+    name:
+    <%= f.text_field :name %>
+    <%= f.text_field :age %>
+    <%= f.submit %>
+<%end%>

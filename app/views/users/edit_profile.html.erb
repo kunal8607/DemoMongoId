@@ -1,0 +1,7 @@
+<h1>Update Profile</h1>
+<%= form_for @profile,:url =>update_profile_user_path(@user) do |f|%>
+    name:
+    <%= f.text_field :nick_name  %>
+    <%= f.text_field :phone_number  %>
+    <%= f.submit %>
+<%end%>
